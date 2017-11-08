@@ -75,7 +75,7 @@ return (
     <div className="jumbotron">
       <h3 className="display-4" > Youtube Api fetch application </h3>
     </div>
-
+    <div className="container">
     <div className="row">
     <div  className="col-md-6" style={{borderRight: '1px dotted grey'}}>
     <h4 className="mb-5"> <span style={{borderBottom: '1px solid grey', borderWeight: '20%'}}>Your choices</span></h4>
@@ -107,13 +107,13 @@ return (
           Videos.link && Videos.link.map((obj, i) => {
           let Vid = <div key={Videos.videoId[i]} className="Video">
           <p className="title">{Videos.title[i]}  <a className="btn btn-secondary" onClick={this.addVid.bind(this, Videos.videoId[i], Videos.title[i], Videos.link[i])}>+</a></p>
-          <iframe  width="500" height="300"  title="{Videoss.title[i]}" src={obj} allowFullScreen></iframe>
+          <iframe  width="500" height="300"  title="{Videos.title[i]}" src={obj} allowFullScreen></iframe>
           </div>
           return Vid;
         })
       }
 
-
+            </div>
           </div>
         </div>
     </div>
